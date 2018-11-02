@@ -1,0 +1,40 @@
+<main class="main">
+  <div class="wrap">
+    <div class="main__content">
+      <header class="header">
+        <div class="header__logo">
+          <a href="#">{{mixins.icon('logo')}}</a></div>
+        <nav class="nav">
+          <ul class="nav__list">
+            {% for item in nav %}
+            <li class="nav__item">
+              <a href="#" class="nav__link">{{item.link}}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </nav>
+        <div class="header__btns">
+          <button class="btn header__btn">Login</button>
+          <button class="btn header__btn">Sign Up</button>
+        </div>
+      </header>
+      <div class="caption">
+        <h1 class="h1">Take control of your event app.</h1>
+        <p>Everything you need to build and manage apps that engage and delight.</p>
+        <button class="btn caption__btn">Learn More</button>
+      </div>
+      <div class="companies">
+        <p>Hundreds of organizations trust Attendify to enhance their events:</p>
+        <ul class="companies__list">
+          <li class="companies__item"><a href="#" class="companies__link"></a></li>
+          <li class="companies__item"><a href="#" class="companies__link"></a></li>
+          <li class="companies__item"><a href="#" class="companies__link"></a></li>
+          <li class="companies__item"><a href="#" class="companies__link"></a></li>
+          <li class="companies__item"><a href="#" class="companies__link"></a></li>
+          <li class="companies__item"><a href="#" class="companies__link"></a></li>
+          <li class="companies__item"><a href="#" class="companies__link"></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>

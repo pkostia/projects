@@ -1,0 +1,18 @@
+<section class="section is--dark brand">
+  <div class="wrap">
+    <h3 class="h3 brand__header">Your own branded event app in 1 week? Yes!</h3>
+    <div class="brand__content">
+      <div class="brand__steps">
+        {% for item in brand %}
+        <div class="brand__step">
+          <span class="brand__img">{{mixins.icon(item.img)}}</span>
+          <h4 class="h4 brand__title">{{item.title}}</h4>
+          <p>{{item.text}}</p>
+        </div>
+        <div class="brand__step-next">{{mixins.icon('nextstep')}}</div>
+        {% endfor %}
+      </div>
+      <button class="btn brand__btn">How-to Guide</button>
+    </div>
+  </div>
+</section>
