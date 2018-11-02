@@ -1,0 +1,105 @@
+.form-result
+	&__in
+		display: flex
+		flex-direction: row
+		justify-content: stretch
+		+r($s-screen)
+			flex-direction: column
+	&__row
+		display: flex
+		flex-direction: row
+		margin-bottom: 45px
+		+r($s-screen)
+			margin-bottom: 5px
+		&:last-of-type
+			margin-bottom: 0
+	&__side
+		width: 50%
+		+r($s-screen)
+			width: 100%
+		&.is-hidden
+			display: none
+	[data-step="preview"]
+		+r($s-screen)
+			margin-bottom: 40px
+			&.is-hidden
+				& + .form-result__side
+					display: none
+		.form
+			min-width: 100%
+	&__step
+		margin-bottom: 97px
+		font-size: 17px
+		+r($s-screen)
+			margin-bottom: 33px
+	&__step-title
+		margin-bottom: 17px
+		text-transform: uppercase
+		+c-bold
+		+r($m-screen)
+			margin-bottom: 4px
+	&__step-txt
+		color: $color-grey
+		font-size: 18px
+		+c-bold
+	&__item
+		width: 50%
+		overflow: hidden
+		&_field
+			font-size: 16px
+		&_value
+			font-size: 18px
+			white-space: nowrap
+			text-overflow: ellipsis
+			+c-bold
+	&__side
+		position: relative
+		&:nth-of-type(1)
+			padding-bottom: 60px
+		&:nth-of-type(2)
+			.form-result__step-title
+				color: $color-darkblue
+		&:nth-of-type(3)
+			.form-result__step
+				margin-bottom: 0
+			.form
+				margin-top: 28px
+				max-width: 100%
+				// padding-left: 40px
+				+r($s-screen)
+					padding-left: 0
+			.form-result__step
+				+r($m-screen)
+					padding-left: 40px
+				+r($s-screen)
+					padding-left: 0
+		+r($m-screen)
+			padding-left: 4px
+			padding-right: 4px
+	&__btn
+		position: absolute
+		bottom: 34px
+		padding: 18px 16px
+		left: 50%
+		margin-left: -150px
+		width: 300px
+		+r($m-screen)
+			margin-left: -100px
+		+r($s-screen)
+			position: relative
+			bottom: auto
+			margin-top: 20px
+	.form
+		max-width: 320px
+		&__in
+			width: 100%
+	.radiobtn
+		+r($m-screen)
+			margin-right: 10px
+			padding-left: 40px
+	.btn
+		+r($m-screen)
+			padding: 18px 4px 14px
+			font-size: 14px
+			margin-top: 18px
+			width: 200px

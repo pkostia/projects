@@ -1,0 +1,122 @@
+.questions
+	padding: 56px 0 305px
+	background-image: url('../img/typical-questions-background.png')
+	background-repeat: no-repeat
+	background-size: auto
+	background-position: top 80px center
+	+r($l-screen)
+		padding-top: 185px
+		padding-bottom: 245px
+		background-position: top 207px left 82px
+		background-image: url('../img/typical-questions-bg-960.png')
+	+r(1025)
+		background-position: top 207px left -77px
+	+r($m-screen)
+		background-position: top 35px center
+		background: none
+		padding-bottom: 56px
+		padding-top: 73px
+	+r($s-screen)
+		padding-top: 40px
+		padding-bottom: 46px 
+	&__in
+		+r($m-screen)
+			padding: 0 40px
+		+r($s-screen)
+			padding: 0 10px
+	&__wrapper
+		margin: 69px auto 0
+		max-width: 680px
+		+r($m-screen)
+			margin-top: 50px
+		+r($s-screen)
+			margin-top: 24px
+	&__item
+		cursor: pointer
+		margin-bottom: 1px
+		height: 82px
+		overflow: hidden
+		transition: height linear 0.2s
+		+r($s-screen)
+			height: 60px
+		&.is-active,
+		&:hover
+			.questions
+				&__header
+					border-color: $color-darkblue
+				&__title
+					color: $color-darkblue
+				&__btn
+					background-color: $color-darkblue
+					transition: background-color linear 0.2s
+					& > svg
+						fill: $color-white
+						transition: fill linear 0.2s
+		&.is-active
+			.questions
+				&__text
+					// display: block
+					// padding: 28px 30px
+				&__btn
+					& > svg
+						transform: translate(-50%, -50%) rotate(180deg)
+	&__header
+		background-color: $color-white
+		border: 1px solid $color-lightgrey
+		border-radius: 3px
+		line-height: 1em
+		padding: 28px 42px
+		padding-right: 80px
+		position: relative
+		+r($s-screen)
+			display: flex
+			align-items: center
+			padding: 0px 5px
+			padding-right: 60px
+			font-size: 10px
+			line-height: 1.5em
+			height: 60px
+		&:last-of-type
+			margin-bottom: 0
+	&__title
+		color: $color-grey
+		font-size: 18px
+		+c-light
+		+r($s-screen)
+			font-size: 14px
+			padding-left: 13px
+	&__text
+		background-color: $color-whisper
+		border-radius: 3px
+		// display: none
+		font-size: 14px
+		padding: 28px 30px
+		+c-light
+		& > p
+			margin-top: 1em
+			&:first-of-type
+				margin-top: 0
+		ul
+			margin-bottom: 1em
+			padding-left: 20px
+			list-style-type: disc
+			& > li
+				margin-top: 0.5em
+	&__btn
+		border: 1px solid $color-darkblue
+		border-radius: 3px
+		font-size: 10px
+		height: 100%
+		right: -1px
+		position: absolute
+		top: 0
+		width: 80px
+		+r($s-screen)
+			width: 60px
+		& > svg
+			fill: $color-darkblue
+			left: 50%
+			position: absolute
+			top: 50%
+			transform: translate(-50%, -50%)
+			transition: transform 0.2s linear

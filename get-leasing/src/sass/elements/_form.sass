@@ -1,0 +1,139 @@
+=valid
+	&:before,
+	&:after
+		+pseudo
+		background-color: $color-darkblue
+		border-radius: 50%
+		left: auto
+		top: 50%
+		transform: translateY(-50%)
+		right: -49px
+		+r($m-screen)
+			top: -16px 
+			right: -4px 
+			transform: none
+		+r($s-screen)
+			top: 6px
+			right: -25px
+	&:after
+		background-image: url('./../img/checked.svg')
+		background-repeat: no-repeat
+		background-size: 16px auto
+		background-position: center
+		height: 30px
+		width: 30px
+		+r($m-screen)
+			width: 20px
+			height: 20px
+			background-size: 8px auto
+			top: 10px
+			right: -35px
+	&:before
+		height: 38px
+		right: -53px
+		opacity: 0.4
+		width: 38px
+		+r($m-screen)
+			height: 24px
+			width: 24px
+			right: -37px
+			top: 8px
+		+r($s-screen)
+			height: 20px
+			width: 20px
+
+.form
+	border-radius: 3px
+	box-shadow: 0 0 21px rgba(0, 0, 0, 0.07)
+	padding: 40px 20px 70px
+	width: 800px
+	// margin-top: -40px
+	+r($l-screen)
+		padding: 40px 65px 23px 50px
+		width: 480px
+		// margin-top: 0px
+	+r($m-screen)
+		min-width: 300px
+		max-width: 420px
+		padding: 35px 65px 23px 66px
+		// margin-top: -20px
+	+r($s-screen)
+		min-width: 300px
+		padding: 20px 30px 20px
+	&__in
+		margin: auto
+		width: 462px
+		+r($l-screen)
+			width: 100%
+	&__row
+		margin-top: 52px
+		+r($s-screen)
+			margin-top: 20px
+	&__header
+		display: flex
+		flex-direction: row
+	&__msg
+		color: $color-darkergrey
+		font-size: 12px
+		margin-top: 17px
+		text-align: center
+		+c-light
+	&__link
+		color: $color-darkblue
+		text-decoration: none
+	&__textual
+		margin: 30px 0
+		font-size: 16px
+		+c-bold
+	.radiobtn
+		margin-right: 44px
+		+r($s-screen)
+			margin-right: 20px
+		&:last-of-type
+			margin-right: 0
+	.textarea
+		margin-top: 50px
+		height: 140px
+		+r($s-screen)
+			margin-top: 32px
+		&__placeholder
+			span
+				font-family: Arial 
+				font-size: 20px 
+	.input,
+	.select
+		position: relative
+	.input
+		margin-top: 27px
+		+r($s-screen)
+			margin-top: 10px
+		&.is-filled
+			+valid
+	.select
+		margin-top: 33px
+		&:first-child
+			+r($l-screen)
+				margin-top: 0
+		+r($s-screen)
+			margin-top: 13px
+		&.is-selected
+			+valid
+	.range
+		margin-top: 17px
+	.btn
+		margin: 24px auto 0
+		// padding: 21px 10px
+		+r($l-screen)
+			max-width: 260px
+			margin-top: 25px
+			padding: 18px 10px
+		+r($m-screen)
+			margin-top: 24px
+			max-width: 200px
+			padding: 18px 10px
+		+r($s-screen)
+			margin-top: 12px
+			max-width: 184px !important
+			padding: 15px 10px
+			font-size: 12px
+

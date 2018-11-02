@@ -1,0 +1,74 @@
+<div class="calculator__container" data-transport="3">
+<!-- begin program-view -->
+  <div class="program-view">
+    <div class="program-view__in" data-transport="3">
+      <div class="program-view__side program-view__side_left">
+      	<h4 class="title title_h4 program-view__title">
+			Выберите вид техники и заполните форму
+		</h4>
+		<!-- begin grid-items -->
+			<div class="grid-items js-select-option-wrapper">
+				<div class="grid-items__in">
+					{% for item in specials %}
+					<div class="grid-items__item js-select-option" data-select-name="special-equipment" data-select-header="{{item.title}}">
+						<div class="grid-items__preview">
+							<img src="{{item.img}}" alt="Specials" />	
+						</div>
+						<div class="grid-items__title">
+							{{item.title}}
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		<!-- end grid-items -->
+      </div>
+      <div class="program-view__side program-view__side_right">
+      	{% include './_form.html' %}
+      </div>
+    </div>
+  </div>
+<!-- end program-view -->
+<!-- begin special-offers -->
+  <div class="special-offers">
+    <div class="special-offers__in">
+      <h4 class="title title_h4 title_text-center title_text-light">ВЫГОДНЫЕ СПЕЦПРЕДЛОЖЕНИЯ</h4>
+      <div class="special-offers__grid">
+        {% for offer in offersSpecial %}
+        <div class="special-offers__item special-offers__item_{{offer.type}}">
+          <div class="special-offers__header">
+            <div class="special-offers__offer">
+              {% if offer.type === 'percent' %}
+              <span>{{offer.value}}%</span>
+              {% else %}
+              {{mixins.icon('dollar')}}
+              {% endif %}
+            </div>
+            <div class="special-offers__title">{{offer.title}}</div>
+            <div class="special-offers__arrow">
+              {{mixins.icon('down-arrow')}}
+            </div>
+          </div>
+          <div class="special-offers__textual">
+            <div class="special-offers__text">
+              <p>
+                {% if offer.text %}
+                {{offer.text}}
+                {% elif offer.list %}
+                <ul>
+                  {% for item in offer.list %}
+                  <li>{{item}}</li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+              </p>
+            </div>
+          </div>
+          <a href="#" class="special-offers__btn js-modal-link js-special-offer" data-modal-select="special-offers" data-modal-header="{{offer.offerHeader}}" data-offer-type="{{offer.offerType}}" data-modallink="special-offer">получить</a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+<!-- end special-offers -->
+</div>

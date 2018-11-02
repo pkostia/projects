@@ -1,0 +1,28 @@
+.logo
+	display: flex
+	flex-direction: row
+	color: $color-white
+	+c-bold
+	&__icon
+		margin-right: 10px
+		margin-top: -5px 
+		position: relative
+		width: 28px
+		& > svg
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)  
+			font-size: 32px
+			fill: $color-blue
+			+r($s-screen)
+				font-size: 20px
+
+	&__textual
+		width: 170px 
+		font-size: 14px
+		text-transform: uppercase
+		line-height: 1.2em
+		+r($s-screen)
+			width: 120px 
+			font-size: 10px
