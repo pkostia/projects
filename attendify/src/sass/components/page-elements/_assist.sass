@@ -1,0 +1,35 @@
+.assist
+	padding: 45px 0
+	+r(930)
+		padding-top: 30px
+	&__header
+		font-size: 34px
+		line-height: 42px
+		margin-bottom: 50px
+		+r(930)
+			line-height: 30px 
+			margin-bottom: 30px
+	&__content
+		display: flex
+		justify-content: space-between
+		max-width: 900px
+		align-items: center
+		+r(730)
+			flex-wrap: wrap
+			justify-content: space-around
+	&__item
+		text-align: center
+		padding: 0 20px
+		+r(730)
+			margin-bottom: 15px
+		p
+			@include helreg
+			color: $grey-light
+			font-size: 13px
+			line-height: 20px
+	&__title
+		margin-bottom: 18px
+		+r(730)
+			margin-bottom: 5px
+	&__sep
+		

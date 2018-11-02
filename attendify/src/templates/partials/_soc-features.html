@@ -1,0 +1,26 @@
+<section class="section is--light soc-features">
+  <div class="wrap">
+    <div class="soc-features__content">
+      <div class="section__left">
+        <h2 class="h2">Not just an<br> event app,<br> a private social network.</h2>
+        <p>Leverage the power of social at your event with a private networking app build just for your even`t. Photos, messages, likes, comments, polls and more.</p>
+        <button class="btn btn-more">Learn More <span>{{mixins.icon('arrowright')}}</span></button>
+      </div>
+      <div class="soc-features__right">
+        <div class="soc-features__phone">
+          <img src="img/socfeatures/phone.png" alt="">
+        </div>
+        <ul class="soc-features__list">
+          {% for item in socfeatures %}
+          <li class="soc-features__item">
+            <a href="#" class="soc-features__link">
+              <span>{{mixins.icon(item.img)}}</span>
+              <span>{{item.text}}</span>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

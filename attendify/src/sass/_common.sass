@@ -1,0 +1,119 @@
+a
+	@include hellight
+	text-decoration: none
+.wrap
+	max-width: 970px
+	margin: 0 auto
+	padding-left: 10px
+	padding-right: 10px
+.h1
+	@include omneslight
+	font-size: 56px
+	+r(740)
+		font-size: 40px
+	+r(415)
+		font-size: 30px
+.h2
+	@include omneslight
+	font-size: 40px
+	color: $h2-color
+	+r(930)
+		font-size: 30px
+	&.is--row
+		font-size: 42px
+		+r(930)
+			font-size: 32px
+	&.is--light
+		color: $white
+	
+.h3
+	@include omneslight
+	font-size: 32px
+	text-align: center
+	+r(930)
+		font-size: 22px
+	&.is--big
+		font-size: 34px
+		+r(930)
+			font-size: 24px
+.h4
+	@include helbold
+	font-size: 16px
+	color: $white
+.h5
+	@include omneslight
+	font-size: 28px
+	color: $white
+.h6
+	@include helthin
+	font-size: 22px
+	color: $white
+	text-align: center
+	+r(930)
+		font-size: 18px
+
+.section
+	&.is--light
+		background: linear-gradient(30deg, #edf5fa 13%, #fafdff 87%)
+	&.is--dark
+		padding-top: 40px
+		padding-bottom: 40px
+		background: linear-gradient(90deg, #3d454c 0%, #475059 100%)
+	&.is--blue
+		background: linear-gradient(-90deg, #5968b3 0%, #5995b3 100%)
+	&.is--violet
+		background: linear-gradient(-90deg, #9068ae 0%, #5669ae 100%)
+	&__left
+			width: 50%
+			margin-top: 43px
+			+r(930)
+				width: 100%
+				text-align: center
+				margin-bottom: 20px
+				margin-top: 0
+			h2
+				line-height: 50px
+				margin-bottom: 40px
+				+r(930)
+					line-height: 35px
+					margin-bottom: 20px
+			p
+				@include hellight
+				line-height: 30px
+				max-width: 416px
+				margin-bottom: 56px
+				+r(930)
+					font-size: 15px
+					width: 80%
+					margin: 0 auto 10px
+					
+.separator
+	background-color: rgba(0, 0, 0, 0.1)
+	width: 2px
+	height: 80px
+	&.is--short
+		height: 40px
+	&.is--tall
+		height: 120px
+.input
+	@include helreg
+	font-size: 14px
+	color
+	height: 40px
+	width: 100%
+	text-align: center
+	line-height: 40px
+	border-radius: 8px
+	background: $white
+.form-btn
+	width: 100%
+	height: 46px
+	line-height: 46px
+	border-radius: 8px
+	@include helbold
+	font-size: 15px
+	color: $white
+	&.is--green
+		background-color: $green
+	&.is--blue
+		background-color: $blue 
