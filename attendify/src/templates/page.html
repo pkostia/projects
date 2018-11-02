@@ -1,0 +1,229 @@
+---
+title: Attendify
+nav:
+  - link: Main
+  - link: Products
+  - link: Pricing
+  - link: About
+  - link: Blog
+socfeatures:
+  - img: messages
+    text: Messages
+  - img: photos
+    text: Photos
+  - img: polls
+    text: Polls
+  - img: likes
+    text: Likes
+  - img: comments
+    text: Comments
+features:
+  - img: share
+    title: Share Privately
+    text: Leverage the power of Attendify's platform to create and manage apps yourself. Its simpler, faster, and more affordable than ever to create.
+    color: is--blue
+  - img: build
+    title: Build a Community
+    text: Leverage the power of Attendify's platform to create and manage apps yourself. Its simpler, faster, and more affordable than ever to create.
+    color: is--violet
+  - img: control
+    title: Stay in Control
+    text: Leverage the power of Attendify's platform to create and manage apps yourself. Its simpler, faster, and more affordable than ever to create.
+    color: is--red
+bw:
+  - img: schedule
+    subtitle: Schedule
+  - img: speakers
+    subtitle: Speakers
+  - img: sponsors
+    subtitle: Sponsors
+  - img: exhibitors
+    subtitle: Exhibitors
+  - img: delegates
+    subtitle: Delegates
+  - img: schedule
+    subtitle: Maps
+  - img: exhibitmaps
+    subtitle: Exhibit Maps
+  - img: twitter
+    subtitle: Twitter Feed
+  - img: news
+    subtitle: News
+  - img: web
+    subtitle: Web View
+  - img: schedule
+    subtitle: EventBrite
+  - img: about
+    subtitle: About
+graphic:
+  - img: arrowright
+    text: Build
+  - img: arrowright
+    text: Manage
+  - img: arrowright
+    text: Measure
+legenda:
+  - color: green
+    title: Downloads
+  - color: blue
+    title: Sessions
+  - color: purple
+    title: Profiles
+  - color: pink
+    title: Photos
+  - color: orange
+    title: Messages
+brand:
+  - img: checkmark
+    title: Build
+    text: Create your app in just a few hours with Attendify Hub.
+  - img: checkmark
+    title: Submit
+    text: When you're done submit your app and we'll get it built.
+  - img: eye
+    title: Review
+    text: Within 1 business day we'll submit your app to App Stores.
+  - img: appstore
+    title: App Stores
+    text: App Store approval typically takes around 1 week.
+clients:
+  - 
+    logo: astrazeneca
+    number: 82%
+    text: Adoption Rate
+    icons:
+     - clock
+     - percent
+     - polls
+  - 
+    logo: google
+    number: 53
+    text: Sessions/user
+    icons:
+     - man
+     - phone
+     - user
+  - 
+    logo: philips
+    number: 281
+    text: Photos Shared
+    icons:
+     - photocamera
+     - pictures
+     - picture
+  - 
+    logo: bloomberg
+    number: 802
+    text: Messages
+    icons:
+     - arroba
+     - plane
+     - comment
+  - 
+    logo: autodesk
+    number: 142
+    text: Interactions
+    icons:
+     - likes
+     - arrobaauto
+     - chat
+  - 
+    logo: philips
+    number: 768
+    text: Private Messages
+    icons:
+     - newspaper
+     - envelope
+     - mail
+assist:
+  - title: Conferences
+    text: Leverage the power of Attendify's platform to create and manage apps yourself.
+  - title: Corporate Events
+    text: Leverage the power of Attendify's platform to create and manage apps yourself.
+  - title: Associations
+    text: Leverage the power of Attendify's platform to create and manage apps yourself.
+  - title: Faith Based Orgs
+    text: Leverage the power of Attendify's platform to create and manage apps yourself.
+price:
+  - position: left
+    title: Guide
+    text: Replace your print version with an interactive mobile event app.
+    price: 599
+    period: null
+  - position: center
+    title: Social
+    text: A private social network for your event + the Guide App's features. 
+    price: 999
+    period: null
+  - position: right
+    title: Multi-Event
+    text: Whether Guide or Social, run all your events from a single app.
+    price: 199
+    period: /mo
+forms:
+  - 
+    title: Start building your app, free!
+    input:
+     - Email
+     - Password
+     - Repeat Password
+    btn: Sign Up for Free
+    colorbtn: green
+  - 
+    title: "Request a Personal Demo:"
+    input:
+     - Name
+     - Active Field
+     - Phone (optional)
+    btn: Request a Demo
+    colorbtn: blue
+footer:
+  - 
+    title: Products
+    link:
+      - Social
+      - Guide
+      - Multi-Event
+      - Attendify
+  - 
+    title: About
+    link:
+      - How it Works
+      - Company
+      - Press
+      - Careers
+  - 
+    title: Support
+    link:
+      - FAQ
+      - Requst a Demo
+      - Contact
+      - Item 4
+social:
+  - icon: fb
+  - icon: tw
+  - icon: linkedin
+  - icon: gplus
+  - icon: pint
+  - icon: instagram
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+
+
+	{# partial example #}
+  {% include "partials/_main.html" %}
+  {% include "partials/_soc-features.html" %}
+  {% include "partials/_features.html" %}
+  {% include "partials/_bells-whistles.html" %}
+  {% include "partials/_build.html" %}
+  {% include "partials/_brand.html" %}
+  {% include "partials/_clients.html" %}
+  {% include "partials/_assist.html" %}
+  {% include "partials/_price.html" %}
+	{% include "partials/_footer.html" %}
+
+
+{% endblock %}

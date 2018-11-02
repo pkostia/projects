@@ -1,0 +1,140 @@
+.clients
+	padding-top: 60px
+	padding-bottom: 15px
+	+r(930)
+		padding-top: 30px
+	&__caption
+		text-align: center
+		margin-bottom: 50px
+		p
+			@include hellight
+			font-size: 18px
+			color: $dark-text
+			+r(930)
+				font-size: 16px
+	&__header
+		margin-bottom: 15px
+	&__content
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		+r(830)
+			justify-content: space-around
+	&__item
+		width: 260px
+		border: 1px solid $graphic-border
+		border-radius: 28px
+		background-color: $white
+		min-height: 210px
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-bottom: 60px
+		position: relative
+		overflow: hidden
+		cursor: pointer
+		+r(830)
+			margin-bottom: 30px
+		&:hover
+			border: 1px solid #a0cbe9
+		&:hover
+			.icon
+				fill: #a0cbe9
+		&_content
+			text-align: center
+		span
+			@include helthin
+			font-size: 32px
+			color: #565656
+		p
+			@include helmed
+			font-size: 13px
+			color: #8a9399
+			margin-top: 13px
+		i
+			.icon
+				position: absolute
+			.icon-clock
+				font-size: 60px
+				bottom: 25px
+				left: -10px
+			.icon-percent
+				font-size: 34px
+				top: 8px
+				left: 65px
+			.icon-polls
+				font-size: 45px
+				top: 50%
+				right: -3px
+			.icon-man
+				font-size: 38px
+				bottom: 33px
+				left: -10px
+			.icon-phone
+				font-size: 50px
+				top: -20px
+				left: 35%
+			.icon-user
+				font-size: 77px
+				bottom: 40px
+				right: -28px
+			.icon-photocamera
+				font-size: 38px
+				bottom: 20%
+				left: -3px
+			.icon-pictures
+				font-size: 48px
+				left: 40%
+				top: -10px
+			.icon-picture
+				font-size: 72px
+				bottom: 15%
+				right: -15px
+			.icon-arroba
+				font-size: 52px
+				bottom: 20%
+				left: -6px
+			.icon-plane
+				font-size: 43px
+				top: 2%
+				right: 20%
+			.icon-comment
+				font-size: 78px
+				right: -30px
+				bottom: 8%
+			.icon-likes
+				font-size: 63px
+				bottom: 10%
+				left: -10px
+			.icon-arrobaauto
+				font-size: 40px
+				left: 30%
+				top: -5px
+			.icon-chat
+				font-size: 42px
+				bottom: 30%
+				right: -7px
+			.icon-newspaper
+				font-size: 60px
+				bottom: 30%
+				left: -30px
+			.icon-envelope
+				font-size: 40px
+				right: 30%
+				top: 1px
+			.icon-mail
+				font-size: 40px
+				bottom: 10%
+				right: -4px
+
+				
+	&__logo
+		.icon
+			margin-bottom: 25px
+			font-size: 30px
+		.icon-astrazeneca
+			font-size: 40px
+		.icon-google
+			font-size: 40px
+		
+			

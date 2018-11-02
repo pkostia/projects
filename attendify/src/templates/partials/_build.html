@@ -1,0 +1,41 @@
+<section class="section is--light build">
+  <div class="wrap">
+    <div class="build__content">
+      <div class="section__left">
+        <h2 class="h2">Build your app<br> in days,<br> not month.</h2>
+        <p>Building your app is a simple step-by-step process that you can finish in hours. Customize your app with the features you need, colors, graphics, icon and more. </p>
+        <button class="btn btn-more">Learn More <span>{{mixins.icon('arrowright')}}</span></button>
+      </div>
+      <div class="graphic">
+        <ul class="graphic__list">
+          {% for item in graphic %}
+          <li class="graphic__build">
+            <span>{{mixins.icon(item.img)}}</span> {{item.text}}
+          </li>
+          {% endfor %}
+        </ul>
+        <div class="graphic__contents">
+          <ul class="graphic__contents_list">
+            <li class="graphic__content">
+              <p>Build</p>
+            </li>
+            <li class="graphic__content">
+              <p>Manage</p>
+            </li>
+            <li class="graphic__content">
+              <ul class="legenda">
+                {% for item in legenda %}
+                <li class="legenda__item">
+                  <span class="is--{{item.color}}" "></span>
+                  {{item.title}}
+                </li>
+                {% endfor %}
+              </ul>
+              <img src="img/graph.png" alt="" class="legenda__img">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
