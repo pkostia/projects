@@ -1,0 +1,212 @@
+.hero
+	background-image: url('../img/hero-background.png')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: 0% 50%
+	width: 100%
+	height: 100%
+	+r($m-screen)
+		background-position: 75% 50%
+	+r($s-screen)
+		background-position: 50% 50%
+	&__in
+		padding: 20px 0 180px
+		width: 100%
+		+r($l-screen)
+			padding-bottom: 123px
+			&.l-container
+				max-width: 1042px
+		+r($m-screen)
+			padding-bottom: 96px
+		+r($s-screen)
+			padding-bottom: 19px
+	&__header
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: center
+		.order-call
+			+r($l-screen)
+				padding-right: 42px
+			+r($m-screen)
+				padding-right: 0
+	&__logo
+		+r($s-screen)
+			// margin-left: 0px
+	&__title
+		&_h1
+			margin-top: 182px
+			padding-left: 185px
+			position: relative
+			z-index: 10
+			+r($l-screen)
+				font-size: 45px
+				margin-top: 155px
+				padding-left: 70px
+			+r($m-screen)
+				padding-left: 60px
+				padding-top: 10px
+				font-size: 32px
+			+r($s-screen)
+				padding-left: 80px
+				text-align: left
+				font-size: 20px
+				margin-top: 74px
+		&_h4
+			text-transform: none
+			+c-bold
+			+r($m-screen)
+				font-size: 18px
+			+r($s-screen)
+				text-align: center
+	&__content
+		position: relative
+	&__form
+		margin: 89px auto 0
+		max-width: 945px
+		+r($l-screen)
+			margin-top: 76px
+			max-width: 922px
+		+r($m-screen)
+			margin-top: 88px
+		+r($s-screen)
+			margin-top: 23px
+	&__textual
+		color: $color-white
+		font-size: 16px
+		+c-light
+		+r($s-screen)
+			text-align: center
+		&_personal-data
+			font-size: 13px
+			line-height: 1.2em
+			margin-left: auto
+			margin-top: 10px
+			max-width: 240px
+			text-align: right
+			+r($m-screen)
+				margin-top: 6px
+			+r($s-screen)
+				margin: auto
+				margin-top: 10px
+				max-width: 235px
+				text-align: right
+	&__form-container
+		align-items: center
+		justify-content: space-between
+		display: flex
+		flex-direction: row
+		margin-top: 15px
+		+r($l-screen)
+			margin-top: 10px
+		+r($m-screen)
+			margin-top: 14px
+		+r($s-screen)
+			flex-direction: column
+	&__input
+		background-color: rgba(0, 0, 0, 0.1)
+		border-radius: 25px
+		border: 1px solid $color-white
+		color: $color-white
+		font-size: 14px
+		margin-right: 4px
+		padding: 14px 36px
+		width: 300px
+		+c-light
+		+r($m-screen)
+			padding: 9px 34px
+		+r($s-screen)
+			margin-bottom: 10px
+		+r($s-screen)
+			max-width: 235px
+		&::placeholder
+			font-family: inherit
+			font-size: inherit
+			color: inherit
+			opacity: 1
+		&::-moz-placeholder
+			color: $color-white
+		&:hover,
+		&.is-active,
+		&.is-filled
+			border-color: $color-yellow
+		&.is-error
+			border-color: $color-error
+			&:hover,
+			&:focus
+				border-color: $color-yellow
+	&__link
+		color: $color-white
+		text-decoration: none
+		&:hover
+			color: $color-darkyellow
+		& > span
+			text-decoration: underline
+	&__sticker
+		left: 120px
+		top: -89px
+		+r($l-screen)
+			left: 19px
+			top: -102px
+		+r($m-screen)
+			left: 20px
+		+r($s-screen)
+			left: 12px
+			top: -56px
+	.btn
+		+r($m-screen)
+			padding: 16px 10px 14px
+			max-width: 300px
+		+r($s-screen)
+			max-width: 235px
+
+
+.order-call
+	+c-bold
+	&__in
+		align-items: center
+		display: flex
+		font-size: 18px
+		flex-direction: row
+		justify-content: space-between
+		margin: auto
+		max-width: 162px
+	&__number
+		color: $color-white
+		display: block
+		font-size: 18px
+		text-decoration: none
+		+r($s-screen)
+			font-size: 13px
+		span
+			color: $color-blue
+	&__icon
+		position: relative
+		width: 14px
+		+r($s-screen)
+			width: 10px
+		& > svg
+			fill: $color-blue
+			width: 100%
+	&__btn
+		border: 1px solid $color-blue
+		border-radius: 15px
+		color: $color-blue
+		display: block
+		font-size: 12px
+		line-height: 1em
+		margin-top: 3px
+		padding: 9px 0 7px
+		text-align: center
+		text-decoration: none
+		text-transform: uppercase
+		transition: background-color ease-out 0.2s
+		width: 180px
+		+r($s-screen)
+			font-size: 10px
+			padding: 5px 12px 2px
+			margin-top: 0
+			width: auto
+		&:hover
+			background-color: $color-blue
+			color: $color-white

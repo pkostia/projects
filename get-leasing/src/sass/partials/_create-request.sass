@@ -1,0 +1,137 @@
+.create-request
+	padding: 112px 0
+	overflow: hidden
+	width: 100%
+	+r($l-screen)
+		padding-top: 102px
+		padding-bottom: 91px
+	+r($m-screen)
+		padding-top: 94px
+		padding-bottom: 194px
+	+r($s-screen)
+		padding-top: 37px
+		padding-bottom: 50px
+	&__wrapper
+		// align-items: center
+		display: flex
+		flex-direction: row
+		margin-top: 145px
+		justify-content: space-between
+		+r($l-screen)
+			// padding: 10px 20px
+			margin-top: 94px
+		+r($s-screen)
+			margin-top: 5px
+			flex-direction: column
+	&__side
+		&:first-child
+			align-self: flex-start
+		+r($l-screen)
+			position: relative
+			width: 50%
+		+r($m-screen)
+			width: 100%
+		&:nth-child(1)
+			z-index: 2
+			background-color: #fff
+			+r($s-screen)
+				order: 2
+		&:nth-child(2)
+			z-index: 1
+			+r($s-screen)
+				order: 1
+	&__info
+		margin-left: 58px
+		// margin-top: -30px
+		width: 544px
+		+r($l-screen)
+			// margin-top: 15px
+			margin-left: 12px
+		+r($m-screen)
+			margin-left: 0
+			width: 89%
+		+r($s-screen)
+			margin-top: 10px
+	&__textual
+		font-size: 24px
+		padding-left: 26px
+		line-height: 1.2em
+		max-width: 480px
+		// padding-top: 100px
+		+c-light
+		+r($l-screen)
+			height: 100%
+			font-size: 18px
+			max-width: 370px
+		+r($m-screen)
+			padding: 0 20px
+			max-width: 480px
+			margin: auto
+		+r($s-screen)
+			max-width: 420px
+			font-size: 16px
+			padding-right: 0px
+			padding-left: 15px 
+			p
+				margin-bottom: 15px
+				&:last-of-type
+					margin-bottom: 30px
+		p
+			margin-bottom: 35px
+		span
+			color: $color-darkblue
+	&__graphic
+		margin-top: 45px
+		height: 0
+		padding-top: 70%
+		position: relative
+		+r($l-screen)
+			padding-top: 80%
+			margin-top: 60px
+		+r($m-screen)
+			padding-top: 120%
+			left: -10%
+		+r($s-screen)
+			display: none
+		// & > img
+		// 	display: block
+		// 	height: auto
+		// 	width: 100%
+
+	&__image
+		+coverdiv
+		background-repeat: no-repeat
+		background-size: contain
+		background-position: 50% 50%
+		+image('create-request-img.png')
+		top: 32px
+		+r($l-screen)
+			top: -7px
+			// left: -45px
+			// +image('create-request-image-960.png')
+		+r($m-screen)
+			+image('create-request-image-960.png')
+			top: 80px
+			left: 0
+			background-size: cover
+			height: 100%
+		+r($s-screen)
+			top: 86px
+			left: 0
+	.form
+		margin-left: -10px
+		+r($l-screen)
+			// margin-top: -73px
+			margin-left: auto
+			position: relative
+		+r(960)
+			// margin-top: -30px
+		+r($s-screen)
+			margin: auto
+			margin-top: 0
+			max-width: 420px
+			min-width: 300px
+			width: 100%
+	.title_h3
+		+r($s-screen)
+			font-size: 24px

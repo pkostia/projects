@@ -1,0 +1,198 @@
+<!-- begin form -->
+	<form class="form" data-form-title="Оформить запрос">
+		<div class="form__in">
+			{% if modal %}
+			<!-- begin select -->
+	        <div class="select select_hide">
+	          <select name="Марка" data-name="special-offers" required>
+	            <option default disabled="true">Выбрать</option>
+	          </select>
+	        </div>
+	        <!-- end select -->
+	        <div class="input input_hide">
+	        	<input type="text" class="input__field js-required" name="Марка/модель" />
+				    <span class="input__placeholder input__placeholder">Марка/модель</span>
+	        </div>
+	        <div class="form__textual">
+	        	Ваши контактные данные
+	        </div>
+			{% endif %}
+			{% if modal %}
+			<header class="form__header">
+			<!-- begin radiobtn -->
+				<label class="radiobtn js-hideRadio">
+					<input type="radio" name="Организация" value="ЮЛ" checked />
+					<span class="radiobtn__item">
+						{{mixins.icon('checked')}}
+					</span>
+					<span class="radiobtn__title">
+						юл
+					</span>
+				</label>
+			<!-- end radiobtn -->
+			<!-- begin radiobtn -->
+				<label class="radiobtn js-hideRadio">
+					<input type="radio" name="Организация" value="ЮЛ" />
+					<span class="radiobtn__item">
+						{{mixins.icon('checked')}}
+					</span>
+					<span class="radiobtn__title">
+						ип
+					</span>
+				</label>
+			<!-- end radiobtn -->
+			<!-- begin radiobtn -->
+				<label class="radiobtn create-request__radiobtn create-request__radiobtn_fl js-hideRadio" data-hide="lifetime">
+					<input type="radio" name="Организация"  value="ЮЛ" />
+					<span class="radiobtn__item">
+						{{mixins.icon('checked')}}
+					</span>
+					<span class="radiobtn__title">
+						фл
+					</span>
+				</label>
+			<!-- end radiobtn -->
+			</header>
+			<!-- begin input -->
+			<div class="input">
+				<input type="text" class="input__field" name="Название" />
+				<span class="input__placeholder">Название</span>
+			</div>
+			<!-- end input -->
+			<!-- begin select -->
+				<div class="select">
+					<select data-name="regions" name="Регион регистрации" required>
+						<option default disabled="true">Регион регистрации</option>
+					</select>
+				</div>
+			<!-- end select -->
+			<!-- begin input -->
+			<div class="input input_required">
+				<input type="text" class="input__field js-required" name="Имя" />
+				<span class="input__placeholder input__placeholder">Введите имя</span>
+			</div>
+			<!-- end input -->
+			<!-- begin input -->
+			<div class="input input_required">
+				<input type="text" class="input__field js-required" name="Телефон" />
+				<span class="input__placeholder input__placeholder">Введите телефон</span>
+			</div>
+			<!-- end input -->
+			<!-- begin input -->
+			<div class="input input_required">
+				<input type="text" class="input__field js-required" name="Email" />
+				<span class="input__placeholder input__placeholder">Email</span>
+			</div>
+			<!-- end input -->
+			<!-- begin textarea -->
+				<div class="textarea">
+					<textarea cols="30" rows="10" name="Сообщение"></textarea>
+					<div class="textarea__placeholder">Ваш комментарий (не обязательно) <span>&#42;</span></div>
+				</div>
+			<!-- end textarea -->
+			{% else %}
+			<header class="form__header">
+			<!-- begin radiobtn -->
+				<label class="radiobtn js-hideRadio">
+					<input type="radio" name="Организация" value="ЮЛ" checked />
+					<span class="radiobtn__item">
+						{{mixins.icon('checked')}}
+					</span>
+					<span class="radiobtn__title">
+						юл
+					</span>
+				</label>
+			<!-- end radiobtn -->
+			<!-- begin radiobtn -->
+				<label class="radiobtn js-hideRadio">
+					<input type="radio" name="Организация" value="ЮЛ" />
+					<span class="radiobtn__item">
+						{{mixins.icon('checked')}}
+					</span>
+					<span class="radiobtn__title">
+						ип
+					</span>
+				</label>
+			<!-- end radiobtn -->
+			<!-- begin radiobtn -->
+				<label class="radiobtn create-request__radiobtn create-request__radiobtn_fl js-hideRadio" data-hide="lifetime">
+					<input type="radio" name="Организация"  value="ЮЛ" />
+					<span class="radiobtn__item">
+						{{mixins.icon('checked')}}
+					</span>
+					<span class="radiobtn__title">
+						фл
+					</span>
+				</label>
+			<!-- end radiobtn -->
+			</header>
+			<!-- begin input -->
+			<div class="input">
+				<input type="text" class="input__field" name="Название" />
+				<span class="input__placeholder">Название</span>
+			</div>
+			<!-- end input -->
+			<!-- begin select -->
+				<div class="select">
+					<select data-name="regions" name="Регион регистрации" required>
+						<option default disabled="true">Регион регистрации</option>
+					</select>
+				</div>
+			<!-- end select -->
+			<!-- begin select -->
+				<div class="select js-hide-element" data-hide-element="lifetime">
+					<select name="Срок существования" required>
+						<option default disabled="true">Срок существования</option>
+  						{% for item in existTime %}
+						<option value="{{item}}">{{item}}</option>
+						{% endfor %}
+					</select>
+				</div>
+			<!-- end select -->
+			<!-- begin input -->
+			<div class="input input_required">
+				<input type="text" class="input__field js-required" name="Имя" />
+				<span class="input__placeholder input__placeholder">Имя</span>
+			</div>
+			<!-- end input -->
+			<!-- begin input -->
+			<div class="input input_required">
+				<input type="text" class="input__field js-required" name="Телефон" />
+				<span class="input__placeholder input__placeholder">Телефон</span>
+			</div>
+			<!-- end input -->
+			<!-- begin input -->
+			<div class="input input_required">
+				<input type="text" class="input__field js-required" name="Email" />
+				<span class="input__placeholder input__placeholder">Email</span>
+			</div>
+			<!-- end input -->
+			<!-- begin textarea -->
+				<div class="textarea">
+					<textarea cols="30" rows="10" name="Сообщение"></textarea>
+					<div class="textarea__placeholder">Укажите тип имущества и другие интересующие Вас условия сделки &#128969;<span>&#42;</span></div>
+				</div>
+			<!-- end textarea -->
+			{% endif %}
+			{% if modal %}
+			<!-- begin btn -->
+				<button type="submit" class="btn btn_blue">запросить расчёт</button>
+			<!-- end btn -->
+			{% else %}
+			<!-- begin btn -->
+				<button type="submit" class="btn btn_blue js-steps">отправить запрос</button>
+			<!-- end btn -->
+			{% endif %}
+			<div class="form__msg">
+				Оставляя заявку, вы даeте
+				{% if modal %}
+				<span class="form__link">согласие на обработку персональных данных</span>
+				{% else %}
+				<a href="#" class="form__link js-modal-link" data-modallink="personal-data">
+					согласие на обработку персональных данных
+				</a>
+				{% endif %}
+			</div>
+		</div>
+	</form>
+<!-- end form -->

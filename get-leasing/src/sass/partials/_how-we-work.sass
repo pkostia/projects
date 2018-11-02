@@ -1,0 +1,216 @@
+.how-we-work
+	padding: 109px 0 141px
+	+r($l-screen)
+		padding: 100px 20px 103px
+	+r($m-screen)
+		padding: 57px 20px 88px
+	+r($s-screen)
+		padding-top: 36px 
+	.title_h4
+		+r($m-screen)
+			font-size: 18px
+		+r($s-screen)
+			text-align: right
+	&__road
+		background-image: url('../img/road.png')
+		background-repeat: no-repeat
+		background-size: auto 100%
+		background-position: center
+		color: $color-grey
+		font-size: 18px
+		height: 760px
+		margin-top: 58px
+		position: relative
+		width: 100%
+		+r($m-screen)
+			background-position: top left
+			margin: auto
+			width: 540px
+		+r($s-screen)
+			background-image: url('../img/road-mobile.png')
+			background-size: 120px auto
+			font-size: 14px
+			width: 100%
+	&__car
+		height: 154px
+		left: 50%
+		margin-left: -46px
+		opacity: 0
+		position: absolute
+		top: -286px
+		width: 92px
+		z-index: 2000
+		+r($m-screen)
+			top: -142px
+			left: 35px
+			margin-left: 0
+		+r($s-screen)
+			top: -120px
+			left: 30px
+			width: 62px
+		& > img
+			display: block
+			height: auto
+			width: 100%
+	&__content
+		overflow: hidden
+	&__row
+		position: relative
+		margin-top: 75px
+		text-align: right
+		width: 50%
+		visibility: hidden
+		opacity: 0
+		transition: transform, opacity 0.2s linear
+		+r($m-screen)
+			padding-left: 165px
+			margin-left: 0
+			text-align: left
+			opacity: 1
+			visibility: visible
+			width: 100%
+		+r($s-screen)
+			padding-left: 120px
+		&:nth-of-type(2n + 1)
+			margin-left: auto
+			text-align: left
+			+r($m-screen)
+				margin-left: 0
+			.how-we-work__step
+				left: -15px
+				right: auto
+				+r($m-screen)
+					left: 47px
+					&_bigger
+						left: 30px
+				+r($s-screen)
+					left: 35px
+					&_bigger
+						left: 20px
+			.how-we-work__btn
+				margin-right: 0
+				margin-left: 41px
+				+r($l-screen)
+					margin-left: 0
+			.how-we-work__item
+				transform: translateX(300px)
+				+r($m-screen)
+					transform: translateX(0)
+		&:first-of-type,
+		&:last-of-type
+			margin-top: 74px
+			margin-bottom: 95px
+			.how-we-work__step
+				 left: -30px
+		&:first-of-type
+			+r($l-screen)
+				margin-bottom: 30px
+		&:last-of-type
+			.how-we-work__step
+				left: auto
+				right: -30px
+				+r($m-screen)
+					right: auto
+					left: 30px
+				+r($s-screen)
+					left: 20px
+		&:nth-child(2)
+			+r($m-screen)
+				margin-top: 0
+		&.is-active
+			visibility: visible
+			opacity: 1
+			.how-we-work__item
+					transform: translateX(-160px)
+					opacity: 1
+					+r($m-screen)
+						transform: translateX(0)
+			&:nth-of-type(2n + 1)
+				.how-we-work__item
+					transform: translateX(160px)
+					+r($m-screen)
+						transform: translateX(0)
+	&__item
+		line-height: 1em
+		opacity: 0
+		transition: transform 0.2s linear
+		transform: translateX(-300px)
+		+r($m-screen)
+			transform: translateX(0)
+			width: 100%
+			opacity: 1
+		&_has-btn
+			display: flex
+			flex-direction: row
+			+r($l-screen)
+				flex-direction: column
+				.how-we-work__btn
+					margin-left: 0
+					margin-top: 20px
+	&__textual
+		& > p
+			+c-bold
+			&:nth-child(2n)
+				+c-light
+	&__step
+		background-color: $color-darkblue
+		border-radius: 50%
+		color: $color-white
+		height: 30px
+		line-height: 30px
+		right: -15px
+		position: absolute
+		top: 0
+		text-align: center
+		width: 30px
+		+c-bold
+		+r($m-screen)
+			right: auto
+			left: 47px
+		+r($s-screen)
+			left: 35px
+		&_bigger
+			height: 60px
+			line-height: 60px
+			margin-top: -10px
+			top: 0
+			width: 60px
+			&:before
+				+pseudo
+				background-color: $color-darkblue
+				border-radius: 50%
+				height: 80px
+				opacity: 0.3
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				width: 80px
+				transition: opacity 0.2 linear
+			&:hover
+				&:before
+					opacity: 0.5
+	&__step-index
+		display: block
+		position: relative
+		top: 1px
+	&__btn
+		border: 1px solid $color-darkblue
+		border-radius: 20px
+		color: $color-darkblue
+		display: block
+		font-size: 14px
+		line-height: 1em
+		padding: 11px 0 9px
+		text-align: center
+		text-decoration: none
+		text-transform: uppercase
+		white-space: nowrap
+		width: 180px
+		+c-extrBold
+		+r($s-screen)
+			font-size: 12px
+			padding: 14px 12px 12px
+			width: 140px
+		&:hover
+			background-color: $color-darkblue
+			color: $color-white
